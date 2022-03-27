@@ -397,6 +397,11 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/three@0.139.0":
+  version "0.139.0"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.139.0.tgz#69af1f0c52f8eea390f513e05478af1dd7f49e6f"
+  integrity sha512-4V/jZhyq7Mv05coUzxL3bz8AuBOSi/1F0RY7ujisHTV0Amy/fnYJ+s7TSJ1/hXjZukSkpuFRgV+wvWUEMbsMbQ==
+
 "@vitejs/plugin-react@^1.0.7":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-1.2.0.tgz#4cfb4c0475e93885e56d66ff15e12ef4c34b0af0"
@@ -948,9 +953,9 @@ lines-and-columns@^1.1.6:
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
 lingo3d-react@^1.1.36:
-  version "1.1.37"
-  resolved "https://registry.yarnpkg.com/lingo3d-react/-/lingo3d-react-1.1.37.tgz#5c86b677bf5d425a54ef36585b7c25b4a8c9a6f9"
-  integrity sha512-d5+WmP8IiAC+KPdRi8rq+aDFwXhRQ+dqsXQ/kJ4XrZVBxEHASd0xSiMRR/+DQ9gg5cLBk/RZ3eL9xWK4kU75sw==
+  version "1.1.47"
+  resolved "https://registry.yarnpkg.com/lingo3d-react/-/lingo3d-react-1.1.47.tgz#3f90c910a2d53fbfb40960043a9550d500679605"
+  integrity sha512-bg05Ai9MzbbflOZ4U0Q4uuGVUIrzdYwvkbVfvFcbldvJm+hQkU5ttKENi5K1u2JwxODFFiUcSuOBgTDtUL5Q7w==
   dependencies:
     "@lincode/hooks" "^1.0.35"
     "@lincode/promiselikes" "^1.0.19"
@@ -960,15 +965,15 @@ lingo3d-react@^1.1.36:
     "@lincode/reactivity" "^1.0.52"
     "@lincode/utils" "*"
     "@tweakpane/core" "1"
-    lingo3d "1.9.56"
+    lingo3d "1.9.63"
     nanoid "3"
     popmotion "11"
     tweakpane "3"
 
-lingo3d@1.9.56:
-  version "1.9.56"
-  resolved "https://registry.yarnpkg.com/lingo3d/-/lingo3d-1.9.56.tgz#0a645cf62143de59b05c71c56d221b04a56548d2"
-  integrity sha512-t1Z6Xq5sGNBdZo7FNLBPyWXkx5JcZIp7YeES0RVkqyLjVGfJRJUGM6ETrmZjumpO/nJwZ3xy2JIMbHZW7l1U4A==
+lingo3d@1.9.63:
+  version "1.9.63"
+  resolved "https://registry.yarnpkg.com/lingo3d/-/lingo3d-1.9.63.tgz#d2773a7f9adb0af55c55b435f7b3b55f48d33cca"
+  integrity sha512-kHm4Ng3SLByZ5+oqsD01OeJDfR1FQ7814AxfJBXTWxeLYXRon63oozh5FaAXARpk3ZBICDvTK4k+stUGfO4e4A==
   dependencies:
     "@lincode/events" "*"
     "@lincode/filetypes" "*"
@@ -977,6 +982,7 @@ lingo3d@1.9.56:
     "@lincode/reactivity" "*"
     "@lincode/utils" "*"
     "@pinyinma/guid" "*"
+    "@types/three" "0.139.0"
     cannon-es "0.19.0"
     resize-observer-polyfill "1"
     three "0.139.0"

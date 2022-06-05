@@ -17,7 +17,7 @@ const Game = () => {
       </div>
 
       <World color="transparent" defaultLight="studio">
-        <Model src="apple_watch/scene.gltf" y={-50} rotationZ={anim} boxVisible={false} />
+        <Model src="apple_watch/scene.gltf" y={-50} rotationZ={anim} boxVisible={false} metalnessFactor={1} roughnessFactor={0.5} />
         <OrbitCamera active z={200} y={80} zoom={1.5} autoRotate enableDamping />
       </World>
 

@@ -7,11 +7,15 @@ import {
   World
 } from "lingo3d-react"
 import { UI } from "lingo3d-react"
+import { useWindowSize } from "lingo3d-react"
 
 const Game = () => {
   // starting animation, apple watch rotates from 180 to 45 degress in 5 seconds
   // 初始动画，苹果手表在5秒内从180度旋转到45度
   const anim = useAnimation({ from: 180, to: 45, duration: 5000 })
+
+  const windowSize = useWindowSize()
+  const fov = windowSize.width < windowSize.height ? 100 : 75
 
   return (
     // backgroud HTML
@@ -51,7 +55,7 @@ const Game = () => {
 
         {/* orbit camera's innerZ determines how far away camera is from the center of the subject */}
         {/* 轨道相机的innerZ确定相机距离目标的距离 */}
-        <OrbitCamera active innerZ={150} autoRotate enableDamping />
+        <OrbitCamera active innerZ={150} autoRotate enableDamping fov={fov} />
 
         {/* foreground HTML is rendered in UI layer, which is always above 3d world */}
         {/* 前景HTML在UI层渲染，UI层总是在3d场景之上 */}

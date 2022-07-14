@@ -6,11 +6,16 @@ import {
   usePreload,
   World
 } from "lingo3d-react"
+import { UI } from "lingo3d-react"
 
 const Game = () => {
+  // starting animation, apple watch rotates from 180 to 45 degress in 5 seconds
+  // 初始动画，苹果手表在5秒内从180度旋转到45度
   const anim = useAnimation({ from: 180, to: 45, duration: 5000 })
 
   return (
+    // backgroud HTML
+    // 背景 HTML
     <div
       className="bg-cover bg-center w-screen h-screen absolute overflow-hidden text-white"
       style={{ backgroundImage: "url(bg.jpg)" }}
@@ -29,7 +34,11 @@ const Game = () => {
         </div>
       </div>
 
+      {/* 3d world */}
+      {/* 3d 场景 */}
       <World color="transparent" defaultLight="studio">
+        {/* apple watch model */}
+        {/* 苹果手表模型 */}
         <Model
           src="apple_watch/scene.gltf"
           rotationZ={anim}
@@ -39,17 +48,28 @@ const Game = () => {
           roughnessFactor={0.5}
           y={-30}
         />
-        <OrbitCamera active innerZ={150} autoRotate enableDamping />
-      </World>
 
-      <div className="absolute bottom-0 w-full p-6">
-        <div className="text-center text-lg opacity-50">swipe to rotate</div>
-        <div className="text-center text-xs">powered by Lingo3D</div>
-      </div>
+        {/* orbit camera's innerZ determines how far away camera is from the center of the subject */}
+        {/* 轨道相机的innerZ确定相机距离目标的距离 */}
+        <OrbitCamera active innerZ={150} autoRotate enableDamping />
+
+        {/* foreground HTML is rendered in UI layer, which is always above 3d world */}
+        {/* 前景HTML在UI层渲染，UI层总是在3d场景之上 */}
+        <UI>
+          <div className="absolute bottom-0 w-full p-6">
+            <div className="text-center text-lg opacity-50">
+              swipe to rotate
+            </div>
+            <div className="text-center text-xs">powered by Lingo3D</div>
+          </div>
+        </UI>
+      </World>
     </div>
   )
 }
 
+// loading screen
+// 加载画面
 const App = () => {
   const progress = usePreload(
     [

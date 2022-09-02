@@ -40,7 +40,7 @@ const Game = () => {
 
       {/* 3d world */}
       {/* 3d 场景 */}
-      <World color="transparent" defaultLight="studio">
+      <World color="transparent" defaultLight="studio" exposure={2}>
         {/* apple watch model */}
         {/* 苹果手表模型 */}
         <Model
